@@ -19,6 +19,8 @@ public class main {
 		
 		time.schedule(run(), period, period);
 		
+		/*system.
+		
 	}
 	
 	public static TimerTask run() {
@@ -34,6 +36,6 @@ public class main {
 			}
 		}
 		print.printOut(min, hrs, day);
-	}
+	}*/
 	
 }
