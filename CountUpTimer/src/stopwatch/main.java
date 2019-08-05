@@ -17,6 +17,9 @@ public class main {
 		//new Omn(minutes);
 		new Omn(5);
 		
+		
+		//TEST New Branch
+		
 		//input.close();
 	}
 	
