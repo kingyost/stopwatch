@@ -7,6 +7,7 @@ public class UuuggghhhLearning {
 	
 	Timer timer;
 	
+	
 	public UuuggghhhLearning(int sec){
 		
 	timer = new Timer();
@@ -22,11 +23,11 @@ public class UuuggghhhLearning {
 
 
 
-	public static void main(String[] args) {
-		
-		new UuuggghhhLearning(5);
-		System.out.println("START!!");
-		
-	}
+//	public static void main(String[] args) {
+//		
+//		new UuuggghhhLearning(5);
+//		System.out.println("START!!");
+//		
+//	}
 
 }

@@ -1,41 +1,16 @@
 package stopwatch;
-
-import java.util.Timer;
-import java.util.TimerTask;
+//Author: Eric Yost
+//Date: 8/01/2019
+//description
 
 public class main {
 
 	public static void main(String[] args) {
 		
-		long period = 300000;
-		
-		int min = 0;
-		int hrs = 0;
-		int day = 0;
-		
-		Timer time = new Timer();
-		Omn omn = new Omn();
-		printer print = new printer();
-		
-		time.schedule(run(), period, period);
-		
-		/*system.
+		new Omn(1);
+		System.out.println("Start!");
+		System.out.println("test2");
 		
 	}
-	
-	public static TimerTask run() {
-		min += 5;
-		if (min == 60)
-		{
-			min = 0;
-			hrs +=1;
-			if (hrs == 24)
-			{
-				hrs = 0;
-				day += 1;
-			}
-		}
-		print.printOut(min, hrs, day);
-	}*/
 	
 }
