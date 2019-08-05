@@ -7,9 +7,7 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		new Omn(1);
-		System.out.println("Start!");
-		System.out.println("test2");
+		new Omn(5);
 		
 	}
 	

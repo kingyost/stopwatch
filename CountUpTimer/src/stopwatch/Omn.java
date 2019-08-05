@@ -11,11 +11,9 @@ public class Omn{
 	
 	public Omn(int sec) {
 		timer = new Timer();
-		//long period = sec * 60 * 10000; //5 min interval - 5 *60 *1000
-		long period = sec; //5 min interval - 5 *60 *1000
-		System.out.println("Test4");
+		long period = sec * 60 * 10000; //5 min interval - 5 *60 *1000
+		//long period = sec;
 		timer.schedule(new timestamp(), period, period);
-		System.out.println("Test3");
 	}
 	
 	
@@ -27,7 +25,6 @@ public class Omn{
 	
 	class timestamp extends TimerTask{
 		public void run() {
-			System.out.println("Test1");
 			min += 5;
 			if (min == 60)
 			{
@@ -42,6 +39,11 @@ public class Omn{
 
 			print.printOut(min, hrs, day);  //calls print class to print to a txt file
 			System.out.println(day +":"+hrs +":"+ min);
+			
+			if(day == 10)
+			{
+				timer.cancel();
+			}
 		}
 	}
 	
