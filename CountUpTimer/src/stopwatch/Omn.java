@@ -12,7 +12,7 @@ public class Omn{
 	public Omn(int sec) {
 		timer = new Timer();
 		long period = sec * 60 * 10000; //5 min interval - 5 *60 *1000
-		//long period = sec;
+		//long period = sec*1000;
 		timer.schedule(new timestamp(), period, period);
 	}
 	
