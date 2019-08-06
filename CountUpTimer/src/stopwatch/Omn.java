@@ -1,7 +1,9 @@
 package stopwatch;
 
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.text.SimpleDateFormat;  
 
 
 public class Omn{
@@ -9,20 +11,24 @@ public class Omn{
 	Timer timer;
 	printer print = new printer();
 	
-	public Omn(int sec) {
-		timer = new Timer();
-		long period = sec * 60 * 1000; //5 min interval - 5 *60 *1000
-		//long period = sec*1000;
-		timer.schedule(new timestamp(), period, period);
-	}
-	
-	
 	int min = 0; //minutes
 	int hrs = 0; //hours
 	int day = 0; //days
 	int maxDays = 3; // maximum time the timer will run
 	
-	//long period = secs * 60 * 10000; //5 min interval - 5 *60 *1000
+	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+    Date date = new Date();
+    String d = "";
+	
+	
+	public Omn(int sec) {
+		timer = new Timer();
+		//long period = sec * 60 * 1000; //5 min interval - 5 *60 *1000
+		long period = sec*1000;
+		timer.schedule(new timestamp(), period, period);
+		d = formatter.format(date);
+	}
+	
 	
 	class timestamp extends TimerTask{
 		public void run() {
@@ -38,7 +44,7 @@ public class Omn{
 				}
 			}
 
-			print.printOut(min, hrs, day);  //calls print class to print to a txt file
+			print.printOut(d, min, hrs, day);  //calls print class to print to a txt file
 			System.out.println(day +":"+hrs +":"+ min);
 			
 			if(day == maxDays)
